@@ -1,44 +1,64 @@
-<style scoped lang="less">
-    .index{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-        h1{
-            height: 150px;
-            img{
-                height: 100%;
-            }
-        }
-        h2{
-            color: #666;
-            margin-bottom: 200px;
-            p{
-                margin: 0 0 50px;
-            }
-        }
-        .ivu-row-flex{
-            height: 100%;
-        }
-    }
-</style>
 <template>
-    <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="24">
-                <h1>
-                    <img src="../images/logo.png">
-                </h1>
-                <h2>
-                    <p>Welcome to your iView app!</p>
-                    <Button type="ghost" @click="handleStart">Start iView</Button>
-                </h2>
-
-                <p>{{reason}}</p>
-            </Col>
-        </Row>
+    <div class="index_bg">
+        <img src="../images/dong7.gif" style="width: 100%; height: 100%;" />
+        <div class="search_form_area">
+            <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
+                <Form-item prop="destination">
+                    <Input v-model="value" placeholder="城市或酒店名称" style="width: 300px"></Input>
+                </Form-item>
+                <Form-item prop="checkIn">
+                    <Date-picker :value="value1" format="yyyy-MM-dd" type="date" placeholder="入住日期" style="width: 200px"></Date-picker>
+                </Form-item>
+                <Form-item prop="checkOut">
+                    <Date-picker :value="value1" format="yyyy-MM-dd" type="date" placeholder="退房日期" style="width: 200px"></Date-picker>
+                </Form-item>
+                <Form-item>
+                    <Button type="warning" style="width: 100px">搜 索</Button>
+                </Form-item>
+            </Form>
+        </div>
+        <div class="container margin-top-30">
+            <Tabs size="small">
+                <Tab-pane label="标签一">
+                    <Row>
+                        <Col span="5" offset="">
+                            <Card>
+                                <p slot="title">无边框卡片</p>
+                                <p>卡片内容</p>
+                                <p>卡片内容</p>
+                                <p>卡片内容</p>
+                            </Card>
+                        </Col>
+                        <Col span="5" offset="1">
+                            <Card>
+                                <p slot="title">使用阴影效果的卡片</p>
+                                <p>卡片内容</p>
+                                <p>卡片内容</p>
+                                <p>卡片内容</p>
+                            </Card>
+                        </Col>
+                        <Col span="5" offset="1">
+                        <Card>
+                            <p slot="title">使用阴影效果的卡片</p>
+                            <p>卡片内容</p>
+                            <p>卡片内容</p>
+                            <p>卡片内容</p>
+                        </Card>
+                        </Col>
+                        <Col span="5" offset="1">
+                        <Card>
+                            <p slot="title">使用阴影效果的卡片</p>
+                            <p>卡片内容</p>
+                            <p>卡片内容</p>
+                            <p>卡片内容</p>
+                        </Card>
+                        </Col>
+                    </Row>
+                </Tab-pane>
+                <Tab-pane label="标签二">标签二的内容</Tab-pane>
+                <Tab-pane label="标签三">标签三的内容</Tab-pane>
+            </Tabs>
+        </div>
     </div>
 </template>
 <script>
@@ -70,3 +90,6 @@ export default {
     }
 }
 </script>
+<style scoped>
+    @import '../styles/index.css';
+</style>

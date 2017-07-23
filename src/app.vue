@@ -4,14 +4,14 @@
 </style>
 <template>
     <div id="app">
-
         <v-head></v-head>
         <router-view></router-view>
     </div>
 </template>
 <script>
-import vHead from './components/public/head.vue'
+import vHead from './views/public/head.vue'
 export default {
+    name: 'app',
     components: {
         vHead,
         'remote-js': {

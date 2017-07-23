@@ -1,0 +1,13 @@
+.container{margin: 0px;padding: 0px; width: 1100px; margin: 0px auto;}
+.margin-top-10{margin-top: 10px;}
+.margin-top-15{margin-top: 15px;}
+.margin-top-20{margin-top: 20px;}
+.margin-top-30{margin-top: 30px;}
+.margin-top-40{margin-top: 40px;}
+.margin-left-10{margin-left: 10px;}
+
+.padding-left-10{padding-left: 10px;}
+
+.default-box{margin:10px 5px; padding: 0px; width: 100%;
+    height:auto; border:1px solid #ff0000; min-height: 200px;}
+
