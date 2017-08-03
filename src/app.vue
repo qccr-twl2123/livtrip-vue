@@ -6,22 +6,17 @@
     <div id="app">
         <v-head></v-head>
         <router-view></router-view>
+        <v-footer></v-footer>
     </div>
 </template>
 <script>
 import vHead from './views/public/head.vue'
+import vFooter from './views/public/footer.vue'
 export default {
     name: 'app',
     components: {
         vHead,
-        'remote-js': {
-            render(createElement) {
-                return createElement('script', { attrs: { type: 'text/javascript', src: this.src }});
-            },
-            props: {
-                src: { type: String, required: true },
-            },
-        },
+        vFooter,
     },
     data () {
         return {}

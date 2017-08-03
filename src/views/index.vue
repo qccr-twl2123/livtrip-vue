@@ -1,6 +1,7 @@
 <template>
     <div class="index_bg">
         <img src="../images/dong7.gif" style="width: 100%; height: 100%;" />
+
         <div class="search_form_area">
             <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
                 <Form-item prop="destination">
@@ -13,60 +14,53 @@
                     <Date-picker :value="value1" format="yyyy-MM-dd" type="date" placeholder="退房日期" style="width: 200px"></Date-picker>
                 </Form-item>
                 <Form-item>
+                    <Select v-model="model6" style="width:160px">
+                        <Option value="beijing" selected>北京市</Option>
+                        <Option value="shanghai" disabled>上海市</Option>
+                        <Option value="shenzhen">深圳市</Option>
+                    </Select>
+                </Form-item>
+                <Form-item>
                     <Button type="warning" style="width: 100px">搜 索</Button>
                 </Form-item>
             </Form>
         </div>
         <div class="container margin-top-30">
-            <Tabs size="small">
-                <Tab-pane label="标签一">
-                    <Row>
-                        <Col span="5" offset="">
-                            <Card>
-                                <p slot="title">无边框卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                            </Card>
-                        </Col>
-                        <Col span="5" offset="1">
-                            <Card>
-                                <p slot="title">使用阴影效果的卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                            </Card>
-                        </Col>
-                        <Col span="5" offset="1">
-                        <Card>
-                            <p slot="title">使用阴影效果的卡片</p>
-                            <p>卡片内容</p>
-                            <p>卡片内容</p>
-                            <p>卡片内容</p>
-                        </Card>
-                        </Col>
-                        <Col span="5" offset="1">
-                        <Card>
-                            <p slot="title">使用阴影效果的卡片</p>
-                            <p>卡片内容</p>
-                            <p>卡片内容</p>
-                            <p>卡片内容</p>
-                        </Card>
-                        </Col>
-                    </Row>
-                </Tab-pane>
-                <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                <Tab-pane label="标签三">标签三的内容</Tab-pane>
-            </Tabs>
+            <h1 class="margin-30">热门地区</h1>
+
+            <Row>
+                <Col span="7">
+                    <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+                <Col span="7" offset="1">
+                    <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+                <Col span="7" offset="1">
+                    <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+            </Row>
+            <Row>
+                <Col span="7">
+                <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+                <Col span="7" offset="1">
+                <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+                <Col span="7" offset="1">
+                <img src="../images/toronto.jpg" class="product_image"/>
+                </Col>
+            </Row>
         </div>
     </div>
+
 </template>
 <script>
 
 export default {
     data(){
         return{
-            reason:"test"
+            reason:"test",
+            model6: '入住人数'
         }
     },
     created(){

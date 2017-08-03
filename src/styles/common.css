@@ -5,9 +5,12 @@
 .margin-top-30{margin-top: 30px;}
 .margin-top-40{margin-top: 40px;}
 .margin-left-10{margin-left: 10px;}
+.font-siz-14{font-size: 14px;}
+.font-siz-16{font-size: 16px;}
+.font-siz-18{font-size: 18px;}
+.margin-30{margin: 30px;}
+
 
 .padding-left-10{padding-left: 10px;}
 
-.default-box{margin:10px 5px; padding: 0px; width: 100%;
-    height:auto; border:1px solid #ff0000; min-height: 200px;}
 
